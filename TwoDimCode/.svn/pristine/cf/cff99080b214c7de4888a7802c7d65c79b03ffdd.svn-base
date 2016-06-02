@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="#d64343" >
+
+        <ImageView
+            android:id="@+id/iv_twodimcode_back"
+            style="@style/IvTitleBarStyle"
+            android:src="@drawable/iv_title_bar_back_selector" />
+
+        <TextView
+            style="@style/TvTitleStyle"
+            android:text="扫一扫" />
+
+        <TextView
+            android:id="@+id/tv_twodimcode_photos"
+            style="@style/TvRightStyle"
+            android:text="从相册选择" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <SurfaceView
+            android:id="@+id/preview_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center" />
+
+        <com.wyy.twodimcode.view.ViewfinderView
+            android:id="@+id/viewfinder_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/transparent" />
+
+        <include
+            android:id="@+id/two_dim_title"
+            layout="@layout/title_ceter_imageview" />
+    </FrameLayout>
+
+</LinearLayout>
